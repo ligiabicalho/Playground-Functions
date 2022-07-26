@@ -24,14 +24,17 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
-console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
-console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
-console.log(splitSentence('foguete')); // ['foguete']
+// console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
+// console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
+// console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
@@ -78,4 +81,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
