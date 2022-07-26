@@ -16,14 +16,17 @@ function compareTrue(animal1, animal2) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(10, 50)); //
-console.log(calcArea(5, 2)); //
-console.log(calcArea(51, 1)); //
+// console.log(calcArea(10, 50)); // 250
+// console.log(calcArea(5, 2)); // 5
+// console.log(calcArea(51, 1)); // 25.5
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  return phrase.split(' ');
 }
+console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
+console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
+console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 4
 function concatName() {
