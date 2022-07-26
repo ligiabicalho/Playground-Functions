@@ -40,19 +40,49 @@ function concatName(arrayString) {
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
-console.log(footballPoints(14, 8)); // 50
-console.log(footballPoints(1, 2)); // 5
-console.log(footballPoints(0, 0)); // 0
+// console.log(footballPoints(14, 8)); // 50
+// console.log(footballPoints(1, 2)); // 5
+// console.log(footballPoints(0, 0)); // 0
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Implemente a função highestCount que deverá retornar a quantidade de vezes que o maior número se repete ao receber um array de números. A função highestCount deve retornar a quantidade de vezes que o maior número se repete dentro do array.
+// Por exemplo:
+// Caso o parâmetro seja um array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
+
+function highestCount(arrayNum) {
+  let highestNum = arrayNum[0];
+  let count = 0;
+
+  for (let num of arrayNum) {
+    for (let num of arrayNum) {
+      if (num > highestNum) {
+        highestNum = num;
+      }
+    }
+    if (highestNum === num) {
+      count += 1;
+    }
+  }
+  return count;
 }
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); // 2
+// console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); // 1
+// console.log(highestCount([0, 0, 0])); // 3
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(cat1) - Math.abs(mouse);
+  let distance2 = Math.abs(cat2) - Math.abs(mouse);
+  if (Math.abs(distance1) === Math.abs(distance2)) {
+    return 'os gatos trombam e o rato foge';
+  } if (distance1 < distance2) {
+    return 'cat1';
+  } return 'cat2';
 }
+console.log(catAndMouse(0, 3, 2)); // cat2
+console.log(catAndMouse(0, 6, 12)); // cat1
+console.log(catAndMouse(0, 4, 4)); // foge
+console.log(catAndMouse(1, 0, 2)); // foge
 
 // Desafio 8
 function fizzBuzz() {
