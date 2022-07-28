@@ -109,11 +109,8 @@ function fizzBuzz(arrayN) {
 
 // Desafio 9
 function encode(phraseVowels) {
-  let encodeVowels = phraseVowels.replace(/a/g, '1');
-  encodeVowels = encodeVowels.replace(/e/g, '2');
-  encodeVowels = encodeVowels.replace(/i/g, '3');
-  encodeVowels = encodeVowels.replace(/o/g, '4');
-  encodeVowels = encodeVowels.replace(/u/g, '5');
+  let objectVowels = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5'};
+  let encodeVowels = phraseVowels.replace(/[aeiou]/g, m => objectVowels[m]);
 
   return encodeVowels;
 }
@@ -123,16 +120,15 @@ console.log(encode('This is an encoding test.'));
 console.log(encode('go Trybe!'));
 
 function decode(phraseNum) {
-  let encodeNum = phraseNum.replace(/1/g, 'a');
-  encodeNum = encodeNum.replace(/2/g, 'e');
-  encodeNum = encodeNum.replace(/3/g, 'i');
-  encodeNum = encodeNum.replace(/4/g, 'o');
-  encodeNum = encodeNum.replace(/5/g, 'u');
+  let objectNum = {'1':'a', '2':'e', '3':'i', '4':'o', '5':'u'};
+  let encodeNum = phraseNum.replace(/[12345]/g, m => objectNum[m]);
 
   return encodeNum;
 }
-console.log(decode('h2ll4'));
-
+console.log(decode(encode('hello')));
+console.log(decode(encode('How are you today?')));
+console.log(decode(encode('This is an encoding test.')));
+console.log(decode(encode('go Trybe!')));
 
 // Desafio 10
 function techList() {
