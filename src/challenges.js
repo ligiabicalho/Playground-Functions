@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 // Desafio 1
 // const girafa = true;
 // const elefante = true;
@@ -87,8 +88,8 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayN) {
   let result = [];
-  for(let number of arrayN){
-    if(number % 3 === 0 &&
+  for (let number of arrayN) {
+    if (number % 3 === 0 &&
       number % 5 === 0) {
       result.push('fizzBuzz')
     } else if (number % 3 === 0) {
@@ -101,17 +102,37 @@ function fizzBuzz(arrayN) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45])); // ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
+
+// console.log(fizzBuzz([2, 15, 7, 9, 45])); // ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
+// console.log(fizzBuzz([7, 9])); // ['bug!', 'fizz']
+// console.log(fizzBuzz([9, 25])); // ['fizz', 'buzz']
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phraseVowels) {
+  let encodeVowels = phraseVowels.replace(/a/g, '1');
+  encodeVowels = encodeVowels.replace(/e/g, '2');
+  encodeVowels = encodeVowels.replace(/i/g, '3');
+  encodeVowels = encodeVowels.replace(/o/g, '4');
+  encodeVowels = encodeVowels.replace(/u/g, '5');
+
+  return encodeVowels;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hello'));
+console.log(encode('How are you today?'));
+console.log(encode('This is an encoding test.'));
+console.log(encode('go Trybe!'));
+
+function decode(phraseNum) {
+  let encodeNum = phraseNum.replace(/1/g, 'a');
+  encodeNum = encodeNum.replace(/2/g, 'e');
+  encodeNum = encodeNum.replace(/3/g, 'i');
+  encodeNum = encodeNum.replace(/4/g, 'o');
+  encodeNum = encodeNum.replace(/5/g, 'u');
+
+  return encodeNum;
 }
+console.log(decode('h2ll4'));
+
 
 // Desafio 10
 function techList() {
