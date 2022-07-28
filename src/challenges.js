@@ -133,13 +133,19 @@ function decode(phraseNum) {
 
 // Desafio 10
 function techList(techArray, name) {
-  for (let i = 0; i < techArray.length; i += 1) {
-    let key = techArray[i];
-    let arrayObject = { key: name };
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+  let orderArray = techArray.sort();
+  let arrayObject = [];
+  for (let element of orderArray) {
+    let object = { tech: element, name };
+    arrayObject.push(object);
   }
   return arrayObject;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(techList([], 'Ligia'));
 
 module.exports = {
   calcArea,
