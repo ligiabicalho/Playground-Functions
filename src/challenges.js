@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable complexity */
 // Desafio 1
 // const girafa = true;
@@ -114,10 +115,10 @@ function encode(phraseVowels) {
 
   return encodeVowels;
 }
-console.log(encode('hello'));
-console.log(encode('How are you today?'));
-console.log(encode('This is an encoding test.'));
-console.log(encode('go Trybe!'));
+// console.log(encode('hello'));
+// console.log(encode('How are you today?'));
+// console.log(encode('This is an encoding test.'));
+// console.log(encode('go Trybe!'));
 
 function decode(phraseNum) {
   let objectNum = {'1':'a', '2':'e', '3':'i', '4':'o', '5':'u'};
@@ -125,15 +126,20 @@ function decode(phraseNum) {
 
   return encodeNum;
 }
-console.log(decode(encode('hello')));
-console.log(decode(encode('How are you today?')));
-console.log(decode(encode('This is an encoding test.')));
-console.log(decode(encode('go Trybe!')));
+// console.log(decode(encode('hello')));
+// console.log(decode(encode('How are you today?')));
+// console.log(decode(encode('This is an encoding test.')));
+// console.log(decode(encode('go Trybe!')));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  for (let i = 0; i < techArray.length; i += 1) {
+    let key = techArray[i];
+    let arrayObject = { key: name };
+  }
+  return arrayObject;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
