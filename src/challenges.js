@@ -60,15 +60,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayN) {
   let result = [];
   for (let number of arrayN) {
-    if (number % 3 === 0 &&
-      number % 5 === 0) {
-      result.push('fizzBuzz')
+    if (number % 3 === 0
+      && number % 5 === 0) {
+      result.push('fizzBuzz');
     } else if (number % 3 === 0) {
-      result.push('fizz')
+      result.push('fizz');
     } else if (number % 5 === 0) {
-      result.push('buzz')
+      result.push('buzz');
     } else {
-      result.push('bug!') 
+      result.push('bug!');
     }
   }
   return result;
@@ -77,14 +77,14 @@ function fizzBuzz(arrayN) {
 // Desafio 9
 function encode(phraseVowels) {
   let objectVowels = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let encodeVowels = phraseVowels.replace(/[aeiou]/g, m => objectVowels[m]);
+  let encodeVowels = phraseVowels.replace(/[aeiou]/g, (m) => objectVowels[m]);
 
   return encodeVowels;
 }
 
 function decode(phraseNum) {
   let objectNum = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
-  let encodeNum = phraseNum.replace(/[12345]/g, m => objectNum[m]);
+  let encodeNum = phraseNum.replace(/[12345]/g, (m) => objectNum[m]);
 
   return encodeNum;
 }
